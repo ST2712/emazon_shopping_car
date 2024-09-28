@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -24,6 +24,6 @@ public class ShoppingCarEntity {
     private long articleId;
     private long userId;
     private int quantity;
-    private LocalDate updateDate;
-    private LocalDate creationDate;
+    private LocalDateTime updateDate;
+    private LocalDateTime creationDate;
 }

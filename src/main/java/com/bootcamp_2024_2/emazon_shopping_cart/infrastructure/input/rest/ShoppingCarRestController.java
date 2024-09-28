@@ -3,6 +3,7 @@ package com.bootcamp_2024_2.emazon_shopping_cart.infrastructure.input.rest;
 import com.bootcamp_2024_2.emazon_shopping_cart.application.dto.request.ShoppingCarRequest;
 import com.bootcamp_2024_2.emazon_shopping_cart.application.dto.response.ShoppingCarResponse;
 import com.bootcamp_2024_2.emazon_shopping_cart.application.handler.ShoppingCarHandler;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class ShoppingCarRestController {
     }
 
     @PostMapping(path = "/v1/shopping_cart")
-    public ShoppingCarResponse saveShoppingCart(@RequestBody ShoppingCarRequest request) {
+    public ShoppingCarResponse saveShoppingCart(@Valid @RequestBody ShoppingCarRequest request) {
         return shoppingCarHandler.save(request);
     }
 
